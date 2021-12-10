@@ -2,6 +2,7 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w',
  'x', 'y', 'z']
 import art
+from clear_screen import screen_clear
 print(art.logo)
 def ceasar(start_text,shift_input,direction_input):
     last_text = ""
@@ -25,13 +26,9 @@ while should_continue:
     shift = shift % 26
     ceasar(start_text=text,shift_input=shift,direction_input=direction) 
     choice = input("enter yes to encode or decode again and no to stop").lower()
+    screen_clear()
     if choice == "no":
         should_continue = False
         print("Goodbye")
     else:
         pass    
-
-
-
-
-    
